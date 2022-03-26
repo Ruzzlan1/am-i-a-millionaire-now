@@ -1,11 +1,10 @@
 // import standart styles
 @use "base/base";
 @use "base/typography";
-@use "base/reset";
 
 // import components
 @use "components/buttons";
-
+@use "components/header";
 // input layouts
 @use "layout/footer";
 
