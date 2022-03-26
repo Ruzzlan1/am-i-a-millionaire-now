@@ -1,5 +1,5 @@
-@use '../base/root' as *;
-@use '../abstracts/mixins' as *;
+@use "../base/root" as *;
+@use "../abstracts/mixins" as *;
 
 body {
   font-size: var(--def-fs);
@@ -15,10 +15,4 @@ html {
       scroll-behavior: auto;
     }
   }
-}
-.hero {
-  background-color: var(--light);
-}
-section {
-  margin-bottom: 8rem;
 }
