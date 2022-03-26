@@ -1,0 +1,13 @@
+@use '../base/root' as *;
+@use '../abstracts/mixins' as *;
+
+.header-primary {
+  color: var(--ntr-dark-blue);
+}
+.header-secondary {
+  color: var(--white);
+}
+.text-primary {
+  color: var(--ntr-dark-violet);
+  font-weight: 300;
+}

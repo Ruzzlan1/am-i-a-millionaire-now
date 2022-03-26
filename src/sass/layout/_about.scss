@@ -1,0 +1,31 @@
+@use '../base/root' as *;
+@use '../abstracts/mixins' as *;
+
+.about {
+  text-align: center;
+  margin-top: 5rem;
+  &-header {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    @include mq(md) {
+      font-size: 2rem;
+    }
+    @include mq(lg) {
+    }
+    @include mq(laptop) {
+      font-size: 2.25rem;
+      margin-top: 7rem;
+    }
+  }
+  &-article {
+    line-height: 1.7;
+    color: var(--ntr-violet);
+    font-weight: 500;
+    max-width: 45ch;
+    margin-inline: auto;
+
+    @include mq(lg) {
+      margin-bottom: 3rem;
+    }
+  }
+}

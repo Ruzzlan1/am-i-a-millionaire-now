@@ -1,0 +1,54 @@
+@use '../abstracts/mixins' as *;
+@use '../base/root' as *;
+
+$primary-blue: hsl(180, 66%, 49%);
+
+.btn {
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  // touch-action: manipulation;
+  font-weight: 700;
+  text-align: center;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &-primary {
+    background-color: var(--blue-primary);
+    max-width: 25ch;
+    border-radius: 40px;
+    padding: 0.75em 1.5em;
+    color: var(--white);
+    &:hover,
+    &:focus {
+      background-color: lighten($primary-blue, 15%);
+      border-color: var(--dark-gold);
+    }
+  }
+  &-shortener {
+    max-width: 100%;
+    border-radius: 5px;
+    @include mq(md) {
+      // place-self: center;
+    }
+  }
+  &-link {
+    padding: 10px 1rem;
+    border-radius: 6px;
+    max-width: 100%;
+    margin-top: 1rem;
+    @include mq(lg) {
+      margin-left: 2rem;
+      margin-top: 0;
+    }
+  }
+}
+button[disabled] {
+  background-color: var(--ntr-gray);
+
+  &:hover {
+    background-color: var(--ntr-violet);
+  }
+}

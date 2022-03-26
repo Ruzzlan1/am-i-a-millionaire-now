@@ -1,0 +1,68 @@
+@use '../abstracts/mixins' as *;
+@use '../base/root' as *;
+
+.footer-container {
+  background-color: var(--ntr-dark-violet);
+}
+.footer {
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  @include mq(lg) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding-block: 2rem;
+    place-items: unset;
+  }
+  &-header {
+    font-size: 1.65rem;
+    padding-block: 1rem;
+    @include mq(laptop) {
+    }
+  }
+
+  &-nav {
+    text-align: center;
+    padding: 1rem;
+    list-style: none;
+    @include mq(lg) {
+      text-align: left;
+      padding: 0;
+    }
+    &__header {
+      color: var(--white);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    &__item + &__item {
+      padding-top: 15px;
+    }
+    &__link {
+      text-decoration: none;
+      color: var(--white);
+      font-weight: 300;
+    }
+    &__link:hover {
+      color: var(--blue-primary);
+    }
+  }
+}
+// styling social icons
+.social-icons {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+
+  @include mq(lg) {
+    align-items: unset;
+  }
+  &__link + &__link {
+    padding-left: 1rem;
+  }
+  &__link {
+    img:hover {
+      filter: brightness(0.5) sepia(1) hue-rotate(140deg) saturate(6);
+    }
+  }
+}
