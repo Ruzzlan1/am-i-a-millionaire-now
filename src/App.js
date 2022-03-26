@@ -1,5 +1,13 @@
 import React from "react";
+import { CurrencyTrackPage } from "./containers/CurrencyTrackPage";
 
-const App = () => <div>Hello world.Fuck you daddy</div>;
+import './sass/module.scss'
+const App = () => {
+    return (
+        <>
+        <CurrencyTrackPage/>
+        </>
+    )
+};
 
 export default App;
