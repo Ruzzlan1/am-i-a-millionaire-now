@@ -1,14 +1,10 @@
 class CurrencyService  {
-
- async getAllCurrencies() {
-     
- }
-
+  #data
  async loadCurrency() {
      try {
      const response = await fetch('https://api.exchangerate.host/latest/?base=USD')
-     const data = await response.json()
-     console.log(data)    
+     this.#data = await response.json()
+     return this.#data.rates    
      } catch (error) {
       console.error(error)
      }
