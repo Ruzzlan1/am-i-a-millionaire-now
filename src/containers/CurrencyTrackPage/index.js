@@ -43,17 +43,6 @@ export const CurrencyTrackPage = () => {
     return res.json()
   }
   //* Get country names from currency name
-  // async function loadCountry(currency) {
-  //   const res = await fetch(`https://restcountries.com/v2/currency/${currency}`)
-  //   const data = await res.json()
-  //   console.log(data[0]?.name)
-  //   if(!data) return
-  //   return data[0]?.name
-  // }
-  
-  // useEffect(() => {
-  //    loadCountry("AZN")
-  // }, [])
   
   const { data, isLoading,isError } = useQuery("exchanges", loadCurrency);
     
