@@ -1,7 +1,6 @@
 import { React, useContext } from "react";
 import { CurrencyContext, useContext } from "../../helpers/context";
 
-import { Button } from "../Button";
 
 export const Input = ({ getCurrencyRate }) => {
   //* Get data from currency context
@@ -23,7 +22,6 @@ export const Input = ({ getCurrencyRate }) => {
         name="amount"
         onChange={handleChange}
       ></input>
-      <Button />
     </form>
   );
 };
