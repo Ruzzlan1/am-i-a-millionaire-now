@@ -14,7 +14,7 @@ export const CurrencyTrackPage = () => {
   const [amount, setAmount] = useState(0);
 
   //* calc currency difference with exchange rates
-  function calcCurrencyRate(rates) {
+   function calcCurrencyRate(rates) {
     const arrRates = Object.entries(rates);
     return arrRates.flatMap((rate) => {
       return rate.reduce((c, r) => {
@@ -43,20 +43,23 @@ export const CurrencyTrackPage = () => {
     return res.json()
   }
   //* Get country names from currency name
-  // async function loadCountry() {
-  //   const res = await fetch('https://restcountries.com/v2/currency/{currency}')
-  //   return res.json()
+  // async function loadCountry(currency) {
+  //   const res = await fetch(`https://restcountries.com/v2/currency/${currency}`)
+  //   const data = await res.json()
+  //   console.log(data[0]?.name)
+  //   if(!data) return
+  //   return data[0]?.name
   // }
+  
+  // useEffect(() => {
+  //    loadCountry("AZN")
+  // }, [])
+  
   const { data, isLoading,isError } = useQuery("exchanges", loadCurrency);
-   
+    
 
   const getCurrencyRate = event => {
     event.preventDefault()
-    if(amount == 0 || amount < 0) {
-      return (
-        <h2>Sikimin basi diyanda</h2>
-      )
-    }
   }
   //* Sort exchange rates ascending order
   if(isLoading) {

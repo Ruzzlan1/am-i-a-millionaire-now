@@ -6,7 +6,7 @@ class CurrencyService {
         "https://api.exchangerate.host/latest/?base=USD"
       );
       this.#data = await response.json();
-      return this.#data.rates;
+      return this.#data;
     } catch (error) {
       console.error(error);
     }
